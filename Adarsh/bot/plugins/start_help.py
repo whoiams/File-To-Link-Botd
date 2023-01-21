@@ -77,7 +77,7 @@ async def start(b, m):
     await StreamBot.send_video(
         chat_id=m.chat.id,
         video ="https://te.legra.ph/file/788e1f924f7d8ece7b507.mp4",
-        caption =f'🫡 **Hey {m.from_user.mention(style="md")}**\n\n**I am Telegram File to Link Generator Bot**.\n\n**Send Me Any File and Get a Direct Download Link and Streamable Link**',
+        caption =f'🫡 **Hey {m.from_user.mention(style="md")}**\n\n**I am Telegram File to Link Generator Bot**.\n\n**Send Me Any File or Video and Get a Direct Download Link and Streamable Link**',
         reply_markup=buttonz)
 
 
@@ -122,8 +122,8 @@ async def help_handler(bot, message):
                 disable_web_page_preview=True)
             return
     await message.reply_text(
-        text="""<b> Send Me Any File or Video I will Give you Streamable Link and Downloadable link.</b>\n
-<b> I also Support Channels, Add Me to your Channel and Send Any Media Files and See Miracle✨ also Send /list to know all Commands""",
+        text="""<b>Send Me Any File or Video I will Give you Streamable Link and Downloadable link.</b>\n
+<b> I also Support Channels, Add Me to your Channel and Send Any Media Files and See Miracle✨\n**Send /list to know all Commands**""",
         
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
