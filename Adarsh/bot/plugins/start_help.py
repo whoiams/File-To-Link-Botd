@@ -111,3 +111,61 @@ async def help_handler(bot, message):
             ]
         )
     )
+
+@StreamBot.on_message(filters.command('about') & filters.private)
+async def about_handler(bot, message):
+    if not await db.is_user_exist(message.from_user.id):
+        await db.add_user(message.from_user.id)
+        await bot.send_message(
+            Var.BIN_CHANNEL,
+            f"**New User Joined**\n\n**New User [{message.from_user.first_name}](tg://user?id={message.from_user.id}) Started Your Bot**"
+        )
+    if Var.UPDATES_CHANNEL is not None:
+        try:
+            user = await bot.get_chat_member(Var.UPDATES_CHANNEL, message.chat.id)
+            if user.status == enums.ChatMemberStatus.BANNED:
+                await bot.send_message(
+                    chat_id=message.chat.id,
+                    text="**You are Banned**",
+                    
+                    disable_web_page_preview=True
+                )
+                return
+        except UserNotParticipant:
+            await bot.send_message(
+                chat_id=message.chat.id,
+                text="**Join Our Channel to Use This Bot**\n\n**Due to Overload, Only Channel Subscribers can Use the Bot**",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("Join Our Channel", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                        ]
+                    ]
+                )
+            )
+            return
+        except Exception:
+            await bot.send_message(
+                chat_id=message.chat.id,
+                text="**𝙰𝙳𝙳 𝙵𝙾𝚁𝙲𝙴 𝚂𝚄𝙱 𝚃𝙾 𝙰𝙽𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻**",
+                
+                disable_web_page_preview=True)
+            return
+    await message.reply_photo(
+            photo="https://te.legra.ph/file/128832fdf95ad28ec4f14.jpg",
+            caption="""<b>Extra Info</b>
+<b>╭━━━━━━━〔TIC File To Link Bot〕</b>
+┣⪼<b>Developer : <a href='https://t.me/DANGER1753'>DANGER</a></b>
+┣⪼<b>Bot Name : <a href='https://t.me/The_Insomniacs_Club_5_Bot'>TIC File To Link Bot</a></b>
+┣⪼<b>sᴏᴜʀᴄᴇ-ᴄᴏᴅᴇ : <a href='https://t.me/The_Insomniacs_Club_Bot'>TIC File To Link Bot</a></b>
+┣⪼<b>ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ</b>
+┣⪼<b>ʟᴀɴɢᴜᴀɢᴇ: ᴘʏᴛʜᴏɴ 3</b>
+<b>╰━━━━━━━ (Thank You) </b>""",
+  
+        
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton("Support", url="https://t.me/The_Insomniacs_Club_Bot")]
+            ]
+        )
+    )
