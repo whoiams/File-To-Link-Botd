@@ -14,7 +14,7 @@ db = Database(Var.DATABASE_URL, Var.name)
 from pyrogram.types import ReplyKeyboardMarkup
            
             
-@StreamBot.on_message(filters.command("status"))
+@StreamBot.on_message(filters.command('start') & filters.private)
 async def start(b, m):
     if not await db.is_user_exist(m.from_user.id):
         await db.add_user(m.from_user.id)
@@ -60,7 +60,7 @@ async def start(b, m):
         caption =f'🫡 **Hey {m.from_user.mention(style="md")}**\n\n**I am Telegram File to Link Generator Bot**.\n\n**Send Me Any File or Video and Get a Direct Download Link and Streamable Link**')
 
 
-@StreamBot.on_message(filters.command("help"))
+@StreamBot.on_message(filters.command('help') & filters.private)
 async def help_handler(bot, message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id)
