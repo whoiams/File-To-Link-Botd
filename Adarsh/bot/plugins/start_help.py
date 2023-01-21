@@ -12,27 +12,7 @@ from pyrogram.errors import UserNotParticipant
 from Adarsh.utils.file_properties import get_name, get_hash, get_media_file_size
 db = Database(Var.DATABASE_URL, Var.name)
 from pyrogram.types import ReplyKeyboardMarkup
-
-if MY_PASS:
-            buttonz=ReplyKeyboardMarkup(
-            [
-                ["⚡️Start⚡️","📚Help📚"],
-                ["📡Ping📡","📊Status📊"]
-                        
-            ],
-            resize_keyboard=True
-        )
-else:
-            buttonz=ReplyKeyboardMarkup(
-            [
-                ["⚡️Start⚡️","📚Help📚"],
-                ["📡Ping📡","📊Status📊"]
-                        
-            ],
-            resize_keyboard=True
-        )
-
-            
+           
             
 @StreamBot.on_message((filters.command("start") | filters.regex('⚡️Start⚡️')) & filters.private )
 async def start(b, m):
