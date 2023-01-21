@@ -14,7 +14,7 @@ db = Database(Var.DATABASE_URL, Var.name)
 from pyrogram.types import ReplyKeyboardMarkup
            
             
-@StreamBot.on_message((filters.command("start") | filters.regex('⚡️Start⚡️')) & filters.private )
+@StreamBot.on_message(filters.command('start') & filters.private & ~filters.edited)
 async def start(b, m):
     if not await db.is_user_exist(m.from_user.id):
         await db.add_user(m.from_user.id)
@@ -61,7 +61,7 @@ async def start(b, m):
         reply_markup=buttonz)
 
 
-@StreamBot.on_message((filters.command("help") | filters.regex('📚Help📚')) & filters.private )
+@StreamBot.on_message(filters.command('help') & filters.private & ~filters.edited)
 async def help_handler(bot, message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id)
