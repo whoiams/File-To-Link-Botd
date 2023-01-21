@@ -99,7 +99,7 @@ async def private_receive_handler(c: Client, m: Message):
         stream_link = f"{Var.URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
         online_link = f"{Var.URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
        
-        msg_text ="""<u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u>\n\n<b>📂 FILE NAME :</b> {}\n\n<b>📦 FILE SIZE :</b> {}\n\n<b>📥 DOWNLOAD :</b> <i>{}</i>\n\n<b> 🖥WATCH  :</b> <i>{}</i>\n\n<b>🚸 NOTE : STREAM LINK IS SLOW WAIT FOR SOMETIME TO LOAD</b>\n<b>🚸 NOTE : LINK WON'T EXPIRE TILL I DELETE</b>"""
+        msg_text ="""<u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱</u>\n\n<b>📂 FILE NAME :</b> {}\n\n<b>📦 FILE SIZE :</b> {}\n\n<b>📥 DOWNLOAD :</b> <i>{}</i>\n\n<b> 🖥 WATCH  :</b> <i>{}</i>\n\n<b>🚸 Streaming Link Maybe Slow Sometimes</b>\n<b>🚸 Link Wont Expire Until I Delete</b>"""
 
         await log_msg.reply_text(text=f"**Requested By :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**User ID :** `{m.from_user.id}`\n**Stream Link :** {stream_link}", disable_web_page_preview=True,  quote=True)
         await m.reply_text(
