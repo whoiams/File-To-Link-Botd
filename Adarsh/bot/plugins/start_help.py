@@ -57,8 +57,7 @@ async def start(b, m):
     await StreamBot.send_video(
         chat_id=m.chat.id,
         video ="https://te.legra.ph/file/788e1f924f7d8ece7b507.mp4",
-        caption =f'🫡 **Hey {m.from_user.mention(style="md")}**\n\n**I am Telegram File to Link Generator Bot**.\n\n**Send Me Any File or Video and Get a Direct Download Link and Streamable Link**',
-        reply_markup=buttonz)
+        caption =f'🫡 **Hey {m.from_user.mention(style="md")}**\n\n**I am Telegram File to Link Generator Bot**.\n\n**Send Me Any File or Video and Get a Direct Download Link and Streamable Link**')
 
 
 @StreamBot.on_message(filters.command("help"))
