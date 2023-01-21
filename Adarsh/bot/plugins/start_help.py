@@ -102,7 +102,7 @@ async def help_handler(bot, message):
             return
     await message.reply_text(
         text="""<b>Send Me Any File or Video I will Give you Streamable Link and Downloadable link.</b>\n
-<b>I also Support Channels, Add Me to your Channel and Send Any Media Files and See Miracle✨""",
+<b>I also Support Channels, Add Me to your Channel and Send Any Media Files and See Miracle✨</b>""",
         
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
@@ -143,13 +143,6 @@ async def about_handler(bot, message):
                     ]
                 )
             )
-            return
-        except Exception:
-            await bot.send_message(
-                chat_id=message.chat.id,
-                text="**Add Force Sub to Any Channel**",
-                
-                disable_web_page_preview=True)
             return
     await message.reply_photo(
             photo="https://te.legra.ph/file/128832fdf95ad28ec4f14.jpg",
