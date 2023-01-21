@@ -70,7 +70,7 @@ async def list(l, m):
     )
     
     
-@StreamBot.on_message((filters.command("ping") | filters.regex('📡Ping📡')) & filters.private )
+@StreamBot.on_message(filters.command("ping"))
 async def ping(b, m):
     start_t = time.time()
     ag = await m.reply_text("....")
@@ -81,7 +81,7 @@ async def ping(b, m):
     
     
     
-@StreamBot.on_message((filters.command("status") | filters.regex('📊Status📊')) & filters.private )
+@StreamBot.on_message(filters.command("status"))
 async def stats(bot, update):
   currentTime = readable_time((time.time() - StartTime))
   total, used, free = shutil.disk_usage('.')
