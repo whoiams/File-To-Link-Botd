@@ -102,7 +102,7 @@ async def help_handler(bot, message):
             return
     await message.reply_text(
         text="""<b>Send Me Any File or Video I will Give you Streamable Link and Downloadable link.</b>\n
-<b>I also Support Channels, Add Me to your Channel and Send Any Media Files and See Miracle✨\n\n**Send /list to know all Commands**""",
+<b>I also Support Channels, Add Me to your Channel and Send Any Media Files and See Miracle✨""",
         
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
