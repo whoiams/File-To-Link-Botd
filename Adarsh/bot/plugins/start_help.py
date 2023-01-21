@@ -76,7 +76,7 @@ async def start(b, m):
             return
     await StreamBot.send_video(
         chat_id=m.chat.id,
-        photo ="https://te.legra.ph/file/788e1f924f7d8ece7b507.mp4",
+        video ="https://te.legra.ph/file/788e1f924f7d8ece7b507.mp4",
         caption =f'🫡 Hey {m.from_user.mention(style="md")}!,\nI am Telegram File to Link Generator Bot.\nSend Me Any File and Get a Direct Download Link and Streamable Link.',
         reply_markup=buttonz)
 
