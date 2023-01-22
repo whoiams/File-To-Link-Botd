@@ -35,7 +35,7 @@ async def start(b, m):
         except UserNotParticipant:
              await StreamBot.send_photo(
                 chat_id=m.chat.id,
-                photo="https://telegra.ph/file/9d94fc0af81234943e1a9.jpg",
+                photo="https://te.legra.ph/file/7fb3511f344453f59ee3f.jpg",
                 caption="**Due to Overload, Only Channel Subscribers can Use the Bot**\n\n**Join Our Channel to Use This Bot**\n\n**After Joining Press Start Again**",
                 reply_markup=InlineKeyboardMarkup(
                     [
@@ -83,7 +83,7 @@ async def help_handler(bot, message):
         except UserNotParticipant:
             await StreamBot.send_photo(
                 chat_id=message.chat.id,
-                photo="https://telegra.ph/file/ca10e459bc6f48a4ad0f7.jpg",
+                photo="https://te.legra.ph/file/7fb3511f344453f59ee3f.jpg",
                 Caption="**Due to Overload, Only Channel Subscribers can Use the Bot**\n\n**Join Our Channel to Use This Bot**\n\n**After Joining Press Start Again**",
                 reply_markup=InlineKeyboardMarkup(
                     [
