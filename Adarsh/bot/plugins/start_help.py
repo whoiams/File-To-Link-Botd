@@ -102,7 +102,7 @@ async def help_handler(bot, message):
                 disable_web_page_preview=True)
             return
     await message.reply_text(
-        text="""**⪼ Send Me Any File or Video I will Give you Streamable and Downloadable link**\n\n**⪼ This Bot also Supports in Channels. Add Me to your Channel as Admin and Get Real Time Links**\n\n**⪼ Send 2 Files Per 5 Minutes to Avoid Spam (Spam = Ban)**\n\n**⪼ Try to Avoid Porn Content 🔞**""",
+        text="""**⪼ Send Me Any File or Video I will Give you Streamable and Downloadable link**\n\n**⪼ This Bot also Supports in Channels. Add Me to your Channel as Admin and Get Real Time Links**\n\n**⪼ Send 2 Files Per 5 Minutes to Avoid Spam (Spam = Ban)**""",
         
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
