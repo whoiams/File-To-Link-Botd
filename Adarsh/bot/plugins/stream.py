@@ -99,7 +99,7 @@ async def private_receive_handler(c: Client, m: Message):
         stream_link = f"{Var.URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
         online_link = f"{Var.URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
        
-        msg_text ="""<u>𝐘𝐨𝐮𝐫 𝐋𝐢𝐧𝐤 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 :</u>\n\n<b>📂 FILE NAME :</b> {}\n\n<b>📦 FILE SIZE :</b> {}\n\n<b>📥 DOWNLOAD :</b> <i>{}</i>\n\n<b>🖥 WATCH :</b> <i>{}</i>\n\n<b>🚸 Links are Valid for 30 Days Only </b>\n\n<b>🚸 Online Watching Links are Slow in PC / Laptops </b>\n\n<b>🚸 All Type of Contents Are Allowed </b>"""
+        msg_text ="""<u>𝐘𝐨𝐮𝐫 𝐋𝐢𝐧𝐤 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 :</u>\n\n<b>📂 FILE NAME :</b> {}\n\n<b>📦 FILE SIZE :</b> {}\n\n<b>📥 DOWNLOAD :</b> <i>{}</i>\n\n<b>🖥 WATCH :</b> <i>{}</i>\n\n<b>🚸 ʟɪɴᴋs ᴅᴏɴ'ᴛ ᴇxᴘɪʀᴇ & ᴀʟʟ ᴄᴏɴᴛᴇɴᴛs ᴀʀᴇ ᴀʟʟᴏᴡᴇᴅ </b>\n\n<b>🚸 ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜɪɴɢ ʟɪɴᴋs ᴀʀᴇ sʟᴏᴡ ɪɴ ᴘᴄ / ʟᴀᴘᴛᴏᴘs </b>"""
 
         await log_msg.reply_text(text=f"**Requested By :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**User ID :** `{m.from_user.id}`", disable_web_page_preview=True,  quote=True)
         await m.reply_text(
