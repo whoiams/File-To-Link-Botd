@@ -36,11 +36,11 @@ async def start(b, m):
              await StreamBot.send_photo(
                 chat_id=m.chat.id,
                 photo="https://te.legra.ph/file/7fb3511f344453f59ee3f.jpg",
-                caption="**Due to Overload, Only Channel Subscribers can Use the Bot**\n\n**Join Our Channel to Use This Bot**\n\n**After Joining Press Start Again**",
+                caption="**ᴅᴜᴇ ᴛᴏ ᴏᴠᴇʀʟᴏᴀᴅ, ᴏɴʟʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ**\n\n**ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ**\n\n**ᴀғᴛᴇʀ ᴊᴏɪɴɪɴɢ ᴄʟɪᴄᴋ sᴛᴀʀᴛ ᴀɢᴀɪɴ**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Jᴏɪɴ ɴᴏᴡ 🔓", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("🔓 ᴊᴏɪɴ ɴᴏᴡ ", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                         ]
                     ]
                 ),
@@ -57,7 +57,7 @@ async def start(b, m):
     await StreamBot.send_video(
         chat_id=m.chat.id,
         video ="https://te.legra.ph/file/788e1f924f7d8ece7b507.mp4",
-        caption =f'🫡 **Hey {m.from_user.mention(style="md")}**\n\n**I am TIC File to Link Generator Bot**.\n\n**Send Me Any File or Video and Get a Direct Download Link and Streamable Link**',
+        caption =f'🫡 **ʜᴇʏ {m.from_user.mention(style="md")}**\n\n**ɪ ᴀᴍ ᴛɪᴄ ғɪʟᴇ ᴛᴏ ʟɪɴᴋ ʙᴏᴛ**.\n\n**sᴇɴᴅ ᴍᴇ ᴀɴʏ ғɪʟᴇ ᴏʀ ᴠɪᴅᴇᴏ ᴀɴᴅ ɢᴇᴛ ᴀ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴᴅ sᴛʀᴇᴀᴍᴀʙʟᴇ ʟɪɴᴋ**',
         )
 
 
@@ -84,7 +84,7 @@ async def help_handler(bot, message):
             await StreamBot.send_photo(
                 chat_id=message.chat.id,
                 photo="https://te.legra.ph/file/7fb3511f344453f59ee3f.jpg",
-                Caption="**Due to Overload, Only Channel Subscribers can Use the Bot**\n\n**Join Our Channel to Use This Bot**\n\n**After Joining Press Start Again**",
+                Caption="**ᴅᴜᴇ ᴛᴏ ᴏᴠᴇʀʟᴏᴀᴅ, ᴏɴʟʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ**\n\n**ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ**\n\n**ᴀғᴛᴇʀ ᴊᴏɪɴɪɴɢ ᴄʟɪᴄᴋ sᴛᴀʀᴛ ᴀɢᴀɪɴ**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -102,13 +102,13 @@ async def help_handler(bot, message):
                 disable_web_page_preview=True)
             return
     await message.reply_text(
-        text="""**⪼ Send Me Any File or Video I will Give you Streamable and Downloadable link**\n\n**⪼ This Bot also Supports in Channels. Add Me to your Channel as Admin and Get Real Time Links**\n\n**⪼ Send 2 Files Per 5 Minutes to Avoid Spam (Spam = Ban)**""",
+        text="""**⪼ sᴇɴᴅ ᴍᴇ ᴀɴʏ ғɪʟᴇ ᴏʀ ᴠɪᴅᴇᴏ ᴀɴᴅ ɢᴇᴛ ᴀ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴᴅ sᴛʀᴇᴀᴍᴀʙʟᴇ ʟɪɴᴋ**\n\n**⪼ ᴛʜɪs ʙᴏᴛ ᴀʟsᴏ sᴜᴘᴘᴏʀᴛs ɪɴ ᴄʜᴀɴɴᴇʟs. ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴀs ᴀᴅᴍɪɴ ᴀɴᴅ ɢᴇᴛ ʀᴇᴀʟ ᴛɪᴍᴇ ʟɪɴᴋs**\n\n**⪼ sᴇɴᴅ 𝟸 ғɪʟᴇs ᴘᴇʀ 𝟻 ᴍɪɴᴜᴛᴇs ᴛᴏ ᴀᴠᴏɪᴅ sᴘᴀᴍ (sᴘᴀᴍ = ʙᴀɴ)**""",
         
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("⚡ Support ⚡", url="https://t.me/TheInsomniacsClub")],
-                [InlineKeyboardButton("💌 Developer 💌", url="https://t.me/DANGER1753")]
+                [InlineKeyboardButton("⚡ sᴜᴘᴘᴏʀᴛ ", url="https://t.me/TheInsomniacsClub")],
+                [InlineKeyboardButton("💌 ᴅᴇᴠᴇʟᴏᴘᴇʀ ", url="https://t.me/DANGER1753")]
             ]
         )
     )
