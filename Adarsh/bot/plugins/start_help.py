@@ -57,7 +57,7 @@ async def start(b, m):
     await StreamBot.send_video(
         chat_id=m.chat.id,
         video ="https://te.legra.ph/file/788e1f924f7d8ece7b507.mp4",
-        caption =f'🫡 **ʜᴇʏ {m.from_user.mention(style="md")}**\n\n**ɪ ᴀᴍ ᴛɪᴄ ғɪʟᴇ ᴛᴏ ʟɪɴᴋ ʙᴏᴛ**.\n\n**sᴇɴᴅ ᴍᴇ ᴀɴʏ ғɪʟᴇ ᴏʀ ᴠɪᴅᴇᴏ ᴀɴᴅ ɢᴇᴛ ᴀ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴᴅ sᴛʀᴇᴀᴍᴀʙʟᴇ ʟɪɴᴋ**',
+        caption =f'🫡 **ʜᴇʏ {m.from_user.mention(style="md")}**\n\n**ɪ ᴀᴍ ᴛɪᴄ ғɪʟᴇ ᴛᴏ ʟɪɴᴋ ʙᴏᴛ**.\n\n**sᴇɴᴅ ᴍᴇ ᴀɴʏ ғɪʟᴇ ᴏʀ ᴠɪᴅᴇᴏ ᴀɴᴅ ɢᴇᴛ ᴀ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴᴅ sᴛʀᴇᴀᴍ ʟɪɴᴋs**',
         )
 
 
@@ -102,7 +102,7 @@ async def help_handler(bot, message):
                 disable_web_page_preview=True)
             return
     await message.reply_text(
-        text="""**⪼ sᴇɴᴅ ᴍᴇ ᴀɴʏ ғɪʟᴇ ᴏʀ ᴠɪᴅᴇᴏ ᴀɴᴅ ɢᴇᴛ ᴀ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴᴅ sᴛʀᴇᴀᴍᴀʙʟᴇ ʟɪɴᴋ**\n\n**⪼ ᴛʜɪs ʙᴏᴛ ᴀʟsᴏ sᴜᴘᴘᴏʀᴛs ɪɴ ᴄʜᴀɴɴᴇʟs. ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴀs ᴀᴅᴍɪɴ ᴀɴᴅ ɢᴇᴛ ʀᴇᴀʟ ᴛɪᴍᴇ ʟɪɴᴋs**\n\n**⪼ sᴇɴᴅ 𝟸 ғɪʟᴇs ᴘᴇʀ 𝟻 ᴍɪɴᴜᴛᴇs ᴛᴏ ᴀᴠᴏɪᴅ sᴘᴀᴍ (sᴘᴀᴍ = ʙᴀɴ)**""",
+        text="""**⪼ ᴛʜɪs ʙᴏᴛ ᴀʟsᴏ sᴜᴘᴘᴏʀᴛs ɪɴ ᴄʜᴀɴɴᴇʟs. ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴀs ᴀᴅᴍɪɴ ᴀɴᴅ ɢᴇᴛ ʀᴇᴀʟ ᴛɪᴍᴇ ʟɪɴᴋs**\n\n**⪼ sᴇɴᴅ 𝟹 ғɪʟᴇs ᴘᴇʀ 𝟻 ᴍɪɴᴜᴛᴇs ᴛᴏ ᴀᴠᴏɪᴅ sᴘᴀᴍ (sᴘᴀᴍ = ʙᴀɴ)**""",
         
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
